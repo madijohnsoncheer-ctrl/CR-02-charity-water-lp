@@ -3,45 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
+    <title>I'M IN. | Clean Water</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
+    <!-- The header keeps the main action visible as visitors explore the page. -->
+    <header class="top-bar">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
 
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
+        <a href="#top" class="logo" aria-label="Charity: water home">
+            <img src="img/cw_logo-2.png" alt="charity: water">
+        </a>
 
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
+        <div class="nav-right">
+            <a href="#give" class="sign-in">SIGN IN</a>
+            <a href="#give" class="nav-cta">GIVE $5</a>
         </div>
-    </section>
 
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
+        <nav class="mobile-menu" aria-label="Main navigation">
+            <a href="#impact">WHERE YOUR $5 GOES</a>
+            <a href="#badge">GET YOUR I'M IN. BADGE</a>
+            <a href="#give">GIVE $5</a>
+        </nav>
+    </header>
+
+    <main id="top">
+        <!-- A strong image and short message make the campaign clear immediately. -->
+        <section class="hero">
+            <img src="img/hero.jpg" alt="Children smiling outdoors in Nepal" class="hero-image">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>I'M IN<span class="yellow-dot">.</span></h1>
+                <p class="hero-tagline">Clean water. Brighter tomorrows.<br>Bigger possibilities.</p>
+                <p class="hero-description">Give $5, get your <strong>I'M IN.</strong> badge, and help bring clean water to millions in need.</p>
+                <a href="#give" class="button hero-button">GIVE $5 | GET IN</a>
+            </div>
+        </section>
+
+        <section class="impact" id="impact">
+            <div class="impact-intro">
+                <h2>Where<br>your $5 goes</h2>
+                <p>Thanks to generous private donors who fund our operational expenses, <strong>100% of your donation</strong> directly funds clean water projects.</p>
+                <a href="#journey" class="impact-link">Scroll to view current impact stats.</a>
+            </div>
+
+            <div class="journey" id="journey">
+                <div class="section-kicker">SMALL ACTIONS. BIG CHANGE.</div>
+                <div class="journey-grid">
+                    <div class="journey-step">
+                        <div class="step-number">1</div>
+                        <img src="img/you-give.jpg" alt="Community member collecting water in Uganda">
+                        <h3>YOU GIVE</h3>
+                    </div>
+                    <div class="arrow" aria-hidden="true">→</div>
+                    <div class="journey-step">
+                        <div class="step-number">2</div>
+                        <img src="img/projects-funded.jpg" alt="Workers building a clean water project in Ethiopia">
+                        <h3>PROJECTS ARE FUNDED</h3>
+                    </div>
+                    <div class="arrow" aria-hidden="true">→</div>
+                    <div class="journey-step">
+                        <div class="step-number">3</div>
+                        <img src="img/millions-clean-water.jpg" alt="Community members receiving clean water in Zimbabwe">
+                        <h3>MILLIONS GET CLEAN WATER</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="badge-panel" id="badge">
+                <div class="badge-copy">
+                    <h2>Get your<br><strong>I'M IN.</strong> badge</h2>
+                    <p>After you give $5, you'll receive a digital I'M IN. badge to share on social media.</p>
+                </div>
+                <div class="badge" aria-label="I'M IN badge">
+                    <div class="badge-ribbon">I'M<br>IN.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="give-section" id="give">
+            <h2>READY TO GET IN?</h2>
+            <p>One small action can help create brighter tomorrows and bigger possibilities.</p>
+            <a href="#top" class="button">GIVE $5</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-brand">
+            <img src="img/cw_logo-2.png" alt="charity: water">
+        </div>
+        <p>CLEAN WATER CREATES A BRIGHTER AND MORE EQUITABLE WORLD FOR ALL</p>
+    </footer>
 </body>
 </html>

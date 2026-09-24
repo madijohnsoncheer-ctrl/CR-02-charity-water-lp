@@ -1,198 +1,123 @@
-/* charity: water Brand Colors & Fonts
+/* Brand colors and beginner-friendly page styles. */
+:root {
+  --yellow: #ffc907;
+  --blue: #2e9df7;
+  --light-blue: #8bd1cb;
+  --green: #4fcb53;
+  --dark-green: #159a48;
+  --ink: #1d252c;
+  --cream: #f8f5ed;
+  --orange: #ff902a;
+  --red: #f5402c;
+  --pink: #f16061;
+  --dark-blue: #163f5c;
+}
 
-Primary Colors:
-- Yellow:     #FFC907
-- Blue:       #2E9DF7
+* { box-sizing: border-box; }
 
-Secondary Colors:
-- Light Blue: #8BD1CB
-- Green:      #4FCB53
-- Orange:     #FF902A
-- Red:        #F5402C
-- Dark Green: #159A48
-- Pink:       #F16061
+img { max-width: 100%; }
 
-Fonts:
-- Proxima Nova
-- Avenir
+html { scroll-behavior: smooth; }
 
-*/
-
-/* 
-  Charity: Water Landing Page Styles
-  This CSS uses the provided color palette and beginner-friendly styles.
-*/
-
-/* Set up the main font and background color for the whole page */
 body {
-  background-color: #f4f8fb; /* Soft light blue for a fresh look */
-  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Avenir", "Proxima Nova", Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  color: #222;
+  overflow-x: hidden;
 }
 
-/* Add a slight shadow and rounded corners to each section for depth */
-section {
-  background: #fff; /* White background for sections */
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07); /* Soft blue shadow */
-  margin: 24px 10px; /* Space between sections */
-  padding: 24px 16px;
+a { color: inherit; }
+
+.top-bar {
+  align-items: center;
+  background: white;
+  border-bottom: 1px solid #e7e7e7;
+  display: flex;
+  height: 76px;
+  justify-content: space-between;
+  padding: 0 5vw;
+  position: relative;
+  z-index: 5;
 }
 
-/* Hero Section Styles */
-.hero {
-  position: relative; /* Needed for overlay */
-  /* Set a background image that covers the whole section */
-  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
-  background-size: cover;      /* Make the image cover the whole area */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat;
-  color: #fff;                 /* White text for contrast */
-  text-align: center;          /* Center the text */
-  padding: 60px 20px;          /* Add space above and below */
-  border-radius: 0 0 16px 16px; /* Only round bottom corners */
+.logo { display: block; height: 34px; width: 190px; }
+.logo img { height: 34px; object-fit: contain; width: 190px; }
+.nav-right { align-items: center; display: flex; gap: 26px; }
+.sign-in, .nav-cta, .button { font-size: 0.8rem; font-weight: bold; letter-spacing: 0.08em; text-decoration: none; }
+.nav-cta, .button { background: var(--yellow); color: var(--ink); padding: 15px 23px; }
+.menu-toggle { display: none; }
+.hamburger { cursor: pointer; display: none; }
+.mobile-menu { display: none; }
 
-  /* Add a dark overlay for better text readability */
-  /* This uses a simple linear-gradient overlay */
-  background-blend-mode: darken;
-  background-color: rgba(46, 157, 247, 0.45); /* Blue overlay */
+.hero { color: white; min-height: 650px; overflow: hidden; position: relative; }
+.hero-image { height: 100%; left: 0; object-fit: cover; object-position: center 18%; position: absolute; top: 0; width: 100%; }
+.hero-overlay { background: rgba(16, 31, 38, 0.48); height: 100%; left: 0; position: absolute; top: 0; width: 100%; }
+.hero-content { max-width: 680px; padding: 130px 8vw 110px; position: relative; z-index: 1; }
+h1, h2, h3, p { margin-top: 0; }
+h1 { font-size: clamp(4rem, 11vw, 9rem); letter-spacing: -0.08em; line-height: 0.85; margin-bottom: 28px; }
+.yellow-dot { color: var(--yellow); }
+.hero-tagline { font-size: clamp(1.4rem, 2.7vw, 2.2rem); font-weight: bold; line-height: 1.12; }
+.hero-description { font-size: 1.05rem; line-height: 1.5; max-width: 420px; }
+.hero-button { background: var(--yellow); color: var(--ink); display: inline-block; margin-top: 16px; }
+
+.impact { padding: 100px 8vw 0; }
+.impact-intro { max-width: 760px; }
+h2 { font-size: clamp(2.7rem, 6vw, 5.5rem); letter-spacing: -0.06em; line-height: 0.9; }
+.impact-intro p { font-size: 1.15rem; line-height: 1.55; max-width: 530px; }
+.impact-link { color: #176cae; font-size: 0.85rem; font-weight: bold; }
+.journey { margin: 110px 0; }
+.section-kicker { color: #176cae; font-size: 0.78rem; font-weight: bold; letter-spacing: 0.16em; margin-bottom: 28px; }
+.journey-grid { align-items: center; display: flex; gap: 20px; justify-content: space-between; }
+.journey-step { flex: 1; }
+.journey-step img { display: block; height: 210px; object-fit: cover; width: 100%; }
+.step-number { align-items: center; background: var(--yellow); border-radius: 50%; display: flex; font-size: 1.2rem; font-weight: bold; height: 40px; justify-content: center; margin-bottom: 10px; width: 40px; }
+.journey-step h3 { font-size: 0.95rem; line-height: 1.1; margin: 14px 0 0; }
+.arrow { color: var(--orange); font-size: 2.5rem; font-weight: bold; }
+.badge-panel { align-items: center; background: var(--light-blue); display: flex; justify-content: space-between; margin: 0 -8vw; padding: 75px 8vw; }
+.badge-copy { max-width: 470px; }
+.badge-copy h2 { margin-bottom: 24px; }
+.badge-copy p { font-size: 1.15rem; line-height: 1.5; }
+/* The badge uses a medal and ribbon shape instead of a plain circle. */
+.badge { align-items: center; display: flex; flex-shrink: 0; height: 270px; justify-content: center; position: relative; width: 220px; }
+.badge::before, .badge::after { background: var(--yellow); clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 78%, 0 100%); content: ""; height: 145px; position: absolute; top: 112px; width: 48px; z-index: 0; }
+.badge::before { left: 58px; transform: rotate(13deg); }
+.badge::after { right: 58px; transform: rotate(-13deg); }
+.badge-ribbon { align-items: center; background: var(--yellow); border: 8px solid white; border-radius: 50%; color: var(--dark-blue); display: flex; font-size: 2rem; font-weight: bold; height: 164px; justify-content: center; line-height: 0.9; padding: 10px; position: relative; text-align: center; width: 164px; z-index: 1; }
+.give-section { background: var(--ink); color: white; padding: 100px 8vw; text-align: center; }
+.give-section h2 { color: var(--yellow); }
+.give-section p { font-size: 1.15rem; margin: 0 auto 30px; max-width: 470px; }
+.give-section .button { background: var(--yellow); color: var(--ink); display: inline-block; }
+.footer { align-items: center; background: white; border-top: 1px solid #e7e7e7; display: flex; justify-content: space-between; padding: 28px 8vw; }
+.footer-brand img { height: auto; max-width: 180px; }
+.footer p { font-size: 0.7rem; font-weight: bold; letter-spacing: 0.08em; margin: 0; max-width: 290px; }
+
+/* Stack the journey before the cards become too narrow on tablets. */
+@media (max-width: 900px) {
+  .journey-grid { align-items: center; flex-direction: column; }
+  .journey-step { max-width: 560px; width: 100%; }
+  .arrow { line-height: 0.5; transform: rotate(90deg); }
+  .badge-panel { gap: 40px; }
 }
 
-/* Make the headline bold and modern */
-.hero h1 {
-  font-size: 2.5em;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Soft shadow for readability */
-}
-
-/* Style the subheadline */
-.hero p {
-  font-size: 1.2em;
-  margin-top: 0;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.12);
-}
-
-/* Story Section Styles */
-.story {
-  background-color: #8BD1CB; /* Secondary Light Blue */
-  color: #222;
-  text-align: center;
-  padding: 30px 20px;
-}
-
-/* Add accent color to section headings */
-h2 {
-  color: #2E9DF7; /* Primary blue */
-  margin-top: 0;
-  font-weight: bold;
-}
-
-/* Call-to-Action Section Styles */
-.call-to-action {
-  background-color: #FFC907; /* Primary Yellow */
-  color: #222;
-  text-align: center;
-  padding: 30px 20px;
-}
-
-/* Style the impact story image */
-.impact-image {
-  width: 100%;
-  max-width: 320px;
-  border-radius: 10px;
-  margin-bottom: 16px;
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
-}
-
-/* Donate Button Styles */
-.donate-button {
-  display: inline-block;
-  background-color: #4FCB53; /* Green */
-  color: #fff;
-  padding: 14px 32px;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 1.1em;
-  margin-top: 18px;
-  box-shadow: 0 2px 8px rgba(79, 203, 83, 0.10);
-  transition: background 0.3s, transform 0.2s;
-  border: none;
-  cursor: pointer;
-}
-
-/* Change button color when hovered */
-.donate-button:hover {
-  background-color: #159A48; /* Dark Green */
-  transform: translateY(-2px) scale(1.04); /* Slight lift */
-}
-
-/* Add some spacing between sections */
-section {
-  margin-bottom: 20px;
-}
-
-/* 
-  Media Queries for Responsive Design
-  Media queries help make your website look good on different screen sizes,
-  like phones (small screens) and computers (large screens).
-*/
-
-/* This media query applies styles when the screen is 600px wide or less (like on most phones) */
-@media (max-width: 600px) {
-  /* Make hero section padding smaller on small screens */
-  .hero {
-    padding: 32px 8px;
-    font-size: 1em;
-  }
-
-  /* Make headline font size smaller so it fits on small screens */
-  .hero h1 {
-    font-size: 1.4em;
-  }
-
-  /* Make subheadline font size smaller */
-  .hero p {
-    font-size: 1em;
-  }
-
-  /* Make story and call-to-action sections have less padding */
-  .story,
-  .call-to-action,
-  .donation-section {
-    padding: 14px 8px;
-  }
-
-  /* Make impact story image smaller and stack above the text */
-  .impact-content {
-    display: block; /* Stack items vertically */
-    text-align: center;
-  }
-
-  .impact-image {
-    width: 90%;    /* Make image take up most of the width */
-    max-width: 220px;
-  }
-}
-
-/* This media query applies styles when the screen is wider than 600px (like on tablets and computers) */
-@media (min-width: 601px) {
-  /* Show image and text side by side in the impact story */
-  .impact-content {
-    display: flex;           /* Place items in a row */
-    align-items: center;     /* Vertically center items */
-    justify-content: center; /* Center the whole group */
-    gap: 28px;               /* Space between image and text */
-    text-align: left;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .impact-image {
-    width: 300px;
-  }
+/* On small screens, stack the journey and reveal the menu with the checkbox. */
+@media (max-width: 700px) {
+  .top-bar { height: 64px; padding: 0 5vw; }
+  .hamburger { display: block; order: -1; width: 25px; }
+  .hamburger span { background: var(--ink); display: block; height: 2px; margin: 5px 0; width: 23px; }
+  .nav-right { gap: 0; }
+  .sign-in { display: none; }
+  .nav-cta { padding: 11px 13px; }
+  .logo, .logo img { height: 26px; width: 165px; }
+  .mobile-menu { background: var(--yellow); left: 0; padding: 18px 5vw; position: absolute; top: 64px; width: 100%; }
+  .mobile-menu a { display: block; font-size: 0.75rem; font-weight: bold; padding: 12px 0; text-decoration: none; }
+  .menu-toggle:checked ~ .mobile-menu { display: block; }
+  .hero { min-height: 600px; }
+  .hero-content { padding: 150px 8vw 80px; }
+  .journey-grid { align-items: stretch; flex-direction: column; }
+  .journey-step img { height: 190px; }
+  .arrow { line-height: 0.5; text-align: center; transform: rotate(90deg); }
+  .badge-panel { align-items: flex-start; flex-direction: column; gap: 40px; }
+  .badge { align-self: center; }
+  .footer { align-items: flex-start; flex-direction: column; gap: 20px; }
 }
